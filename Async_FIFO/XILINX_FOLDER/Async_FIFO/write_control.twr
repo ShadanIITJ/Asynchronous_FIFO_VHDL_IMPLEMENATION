@@ -1,0 +1,101 @@
+--------------------------------------------------------------------------------
+Release 14.7 Trace  (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml write_control.twx write_control.ncd -o write_control.twr
+write_control.pcf
+
+Design file:              write_control.ncd
+Physical constraint file: write_control.pcf
+Device,package,speed:     xc7a100t,csg324,C,-3 (PRODUCTION 1.10 2013-10-13)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk_write
+---------------+------------+------------+------------+------------+------------------+--------+
+               |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
+Source         | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
+---------------+------------+------------+------------+------------+------------------+--------+
+read_pointer<0>|   -0.359(R)|      FAST  |    2.235(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+read_pointer<1>|   -0.398(R)|      FAST  |    2.294(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+read_pointer<2>|   -0.424(R)|      FAST  |    2.315(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+read_pointer<3>|   -0.456(R)|      FAST  |    2.358(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+read_pointer<4>|   -0.417(R)|      FAST  |    2.298(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+read_pointer<5>|   -0.410(R)|      FAST  |    2.294(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+read_pointer<6>|   -0.422(R)|      FAST  |    2.325(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+read_pointer<7>|   -0.362(R)|      FAST  |    2.243(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+read_pointer<8>|   -0.333(R)|      FAST  |    2.208(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+read_pointer<9>|   -0.326(R)|      FAST  |    2.190(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+reset          |    0.612(R)|      FAST  |    2.003(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+w_en           |    0.321(R)|      FAST  |    1.818(R)|      SLOW  |clk_write_BUFGP   |   0.000|
+---------------+------------+------------+------------+------------+------------------+--------+
+
+Clock clk_write to Pad
+---------------------+-----------------+------------+-----------------+------------+------------------+--------+
+                     |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
+Destination          |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
+---------------------+-----------------+------------+-----------------+------------+------------------+--------+
+full                 |         8.305(R)|      SLOW  |         3.553(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<0>|         8.890(R)|      SLOW  |         3.791(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<1>|         8.753(R)|      SLOW  |         3.714(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<2>|         8.737(R)|      SLOW  |         3.606(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<3>|         8.627(R)|      SLOW  |         3.616(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<4>|         8.802(R)|      SLOW  |         3.732(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<5>|         8.968(R)|      SLOW  |         3.776(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<6>|         8.944(R)|      SLOW  |         3.732(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<7>|         9.087(R)|      SLOW  |         3.878(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<8>|         8.951(R)|      SLOW  |         3.719(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_gray_pointer<9>|         8.335(R)|      SLOW  |         3.576(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<0>     |         8.103(R)|      SLOW  |         3.457(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<1>     |         8.087(R)|      SLOW  |         3.430(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<2>     |         8.069(R)|      SLOW  |         3.435(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<3>     |         8.085(R)|      SLOW  |         3.432(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<4>     |         7.959(R)|      SLOW  |         3.376(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<5>     |         8.129(R)|      SLOW  |         3.464(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<6>     |         8.090(R)|      SLOW  |         3.457(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<7>     |         8.313(R)|      SLOW  |         3.582(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<8>     |         8.082(R)|      SLOW  |         3.444(R)|      FAST  |clk_write_BUFGP   |   0.000|
+write_pointer<9>     |         8.259(R)|      SLOW  |         3.550(R)|      FAST  |clk_write_BUFGP   |   0.000|
+---------------------+-----------------+------------+-----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock clk_write
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_write      |    2.959|         |         |         |
+---------------+---------+---------+---------+---------+
+
+
+Analysis completed Sun Feb 28 14:15:49 2021 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 764 MB
+
+
+

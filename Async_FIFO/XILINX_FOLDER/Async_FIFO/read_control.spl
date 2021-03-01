@@ -1,0 +1,10 @@
+[Inputs]
+reset
+r_en
+clk_read
+=write_pointer[9:0]=
+[Outputs]
+empty
+=read_pointer[9:0]=
+=read_gray_pointer[9:0]=
+[BiDir]

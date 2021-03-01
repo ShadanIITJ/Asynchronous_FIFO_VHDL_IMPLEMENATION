@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "secureip" -o "/home/ise/Desktop/CODE/Async_FIFO/test_memeory_isim_beh.exe" -prj "/home/ise/Desktop/CODE/Async_FIFO/test_memeory_beh.prj" "work.test_memeory" 

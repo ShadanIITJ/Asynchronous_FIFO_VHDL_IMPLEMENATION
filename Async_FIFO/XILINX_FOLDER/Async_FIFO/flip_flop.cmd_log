@@ -1,0 +1,4 @@
+xst -intstyle ise -ifn "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.xst" -ofn "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.xst" -ofn "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.xst" -ofn "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.syr" 
+xst -intstyle ise -ifn "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.xst" -ofn "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.syr" 

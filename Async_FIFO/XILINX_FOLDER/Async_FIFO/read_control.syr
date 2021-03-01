@@ -1,0 +1,449 @@
+Release 14.7 - xst P.20131013 (lin64)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: read_control.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "read_control.prj"
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "read_control"
+Output Format                      : NGC
+Target Device                      : xc7a100t-3-csg324
+
+---- Source Options
+Top Module Name                    : read_control
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Shift Register Extraction          : YES
+ROM Style                          : Auto
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Shift Register Minimum Size        : 2
+Use DSP Block                      : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+LUT Combining                      : Auto
+Reduce Control Sets                : Auto
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Auto
+Use Synchronous Set                : Auto
+Use Synchronous Reset              : Auto
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Power Reduction                    : NO
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.vhd" into library work
+Parsing entity <flip_flop>.
+Parsing architecture <firstarc> of entity <flip_flop>.
+Parsing VHDL file "/home/ise/Desktop/CODE/Async_FIFO/synchronizer.vhd" into library work
+Parsing entity <synchronizer>.
+Parsing architecture <twoFfSync> of entity <synchronizer>.
+Parsing VHDL file "/home/ise/Desktop/CODE/Async_FIFO/gray_to_binary.vhd" into library work
+Parsing entity <gray_to_binary>.
+Parsing architecture <arc1> of entity <gray_to_binary>.
+Parsing VHDL file "/home/ise/Desktop/CODE/Async_FIFO/binary_to_gray.vhd" into library work
+Parsing entity <binary_to_gray>.
+Parsing architecture <arc1> of entity <binary_to_gray>.
+Parsing VHDL file "/home/ise/Desktop/CODE/Async_FIFO/read_control.vhd" into library work
+Parsing entity <read_control>.
+Parsing architecture <arc1> of entity <read_control>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <read_control> (architecture <arc1>) from library <work>.
+
+Elaborating entity <flip_flop> (architecture <firstarc>) with generics from library <work>.
+
+Elaborating entity <binary_to_gray> (architecture <arc1>) with generics from library <work>.
+
+Elaborating entity <synchronizer> (architecture <twoFfSync>) with generics from library <work>.
+
+Elaborating entity <gray_to_binary> (architecture <arc1>) with generics from library <work>.
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Synthesizing Unit <read_control>.
+    Related source file is "/home/ise/Desktop/CODE/Async_FIFO/read_control.vhd".
+    Found 10-bit register for signal <read_pointer>.
+    Found 1-bit register for signal <empty>.
+    Found 10-bit adder for signal <old_read_binary[9]_GND_4_o_add_0_OUT> created at line 138.
+    Found 10-bit adder for signal <read_binary[9]_GND_4_o_add_3_OUT> created at line 141.
+    Found 10-bit comparator equal for signal <write_binary[9]_old_read_binary[9]_equal_2_o> created at line 138
+    Found 10-bit comparator equal for signal <read_binary[9]_write_binary[9]_equal_3_o> created at line 138
+    Summary:
+	inferred   2 Adder/Subtractor(s).
+	inferred  11 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+Unit <read_control> synthesized.
+
+Synthesizing Unit <flip_flop>.
+    Related source file is "/home/ise/Desktop/CODE/Async_FIFO/flip_flop.vhd".
+        width = 10
+    Found 10-bit register for signal <output>.
+    Summary:
+	inferred  10 D-type flip-flop(s).
+Unit <flip_flop> synthesized.
+
+Synthesizing Unit <binary_to_gray>.
+    Related source file is "/home/ise/Desktop/CODE/Async_FIFO/binary_to_gray.vhd".
+        width = 10
+    Summary:
+Unit <binary_to_gray> synthesized.
+
+Synthesizing Unit <synchronizer>.
+    Related source file is "/home/ise/Desktop/CODE/Async_FIFO/synchronizer.vhd".
+        width = 10
+    Summary:
+	no macro.
+Unit <synchronizer> synthesized.
+
+Synthesizing Unit <gray_to_binary>.
+    Related source file is "/home/ise/Desktop/CODE/Async_FIFO/gray_to_binary.vhd".
+        width = 10
+    Summary:
+Unit <gray_to_binary> synthesized.
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 5
+ 1-bit register                                        : 1
+ 10-bit register                                       : 4
+# Comparators                                          : 2
+ 10-bit comparator equal                               : 2
+# Xors                                                 : 18
+ 1-bit xor2                                            : 18
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+Synthesizing (advanced) Unit <read_control>.
+The following registers are absorbed into counter <read_binary>: 1 register on signal <read_binary>.
+Unit <read_control> synthesized (advanced).
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 1
+ 10-bit adder                                          : 1
+# Counters                                             : 1
+ 10-bit up counter                                     : 1
+# Registers                                            : 31
+ Flip-Flops                                            : 31
+# Comparators                                          : 2
+ 10-bit comparator equal                               : 2
+# Xors                                                 : 18
+ 1-bit xor2                                            : 18
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <flip_flop> ...
+
+Optimizing unit <read_control> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block read_control, actual ratio is 0.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 41
+ Flip-Flops                                            : 41
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Design Summary                             *
+=========================================================================
+
+Top Level Output File Name         : read_control.ngc
+
+Primitive and Black Box Usage:
+------------------------------
+# BELS                             : 70
+#      GND                         : 1
+#      INV                         : 1
+#      LUT1                        : 9
+#      LUT2                        : 10
+#      LUT3                        : 1
+#      LUT4                        : 5
+#      LUT5                        : 6
+#      LUT6                        : 17
+#      MUXCY                       : 9
+#      VCC                         : 1
+#      XORCY                       : 10
+# FlipFlops/Latches                : 41
+#      FDC                         : 30
+#      FDCE                        : 11
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 33
+#      IBUF                        : 12
+#      OBUF                        : 21
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 7a100tcsg324-3 
+
+
+Slice Logic Utilization: 
+ Number of Slice Registers:              41  out of  126800     0%  
+ Number of Slice LUTs:                   49  out of  63400     0%  
+    Number used as Logic:                49  out of  63400     0%  
+
+Slice Logic Distribution: 
+ Number of LUT Flip Flop pairs used:     75
+   Number with an unused Flip Flop:      34  out of     75    45%  
+   Number with an unused LUT:            26  out of     75    34%  
+   Number of fully used LUT-FF pairs:    15  out of     75    20%  
+   Number of unique control sets:         3
+
+IO Utilization: 
+ Number of IOs:                          34
+ Number of bonded IOBs:                  34  out of    210    16%  
+
+Specific Feature Utilization:
+ Number of BUFG/BUFGCTRLs:                1  out of     32     3%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+Timing Report
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk_read                           | BUFGP                  | 41    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -3
+
+   Minimum period: 3.140ns (Maximum Frequency: 318.471MHz)
+   Minimum input arrival time before clock: 1.201ns
+   Maximum output required time after clock: 1.145ns
+   Maximum combinational path delay: No path found
+
+Timing Details:
+---------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk_read'
+  Clock period: 3.140ns (frequency: 318.471MHz)
+  Total number of paths / destination ports: 1560 / 42
+-------------------------------------------------------------------------
+Delay:               3.140ns (Levels of Logic = 4)
+  Source:            old_read/output_7 (FF)
+  Destination:       read_binary_0 (FF)
+  Source Clock:      clk_read rising
+  Destination Clock: clk_read rising
+
+  Data Path: old_read/output_7 to read_binary_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.361   0.697  old_read/output_7 (old_read/output_7)
+     LUT5:I0->O            1   0.097   0.683  write_binary[9]_old_read_binary[9]_equal_2_o102_SW0_SW2 (N111)
+     LUT6:I1->O            1   0.097   0.295  write_binary[9]_old_read_binary[9]_equal_2_o102_SW0 (N3)
+     LUT6:I5->O            2   0.097   0.299  write_binary[9]_old_read_binary[9]_equal_2_o107 (write_binary[9]_old_read_binary[9]_equal_2_o)
+     LUT5:I4->O           10   0.097   0.321  _n0035_inv1 (_n0035_inv)
+     FDCE:CE                   0.095          read_binary_0
+    ----------------------------------------
+    Total                      3.140ns (0.844ns logic, 2.296ns route)
+                                       (26.9% logic, 73.1% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk_read'
+  Total number of paths / destination ports: 62 / 62
+-------------------------------------------------------------------------
+Offset:              1.201ns (Levels of Logic = 2)
+  Source:            r_en (PAD)
+  Destination:       read_binary_0 (FF)
+  Destination Clock: clk_read rising
+
+  Data Path: r_en to read_binary_0
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   0.001   0.688  r_en_IBUF (r_en_IBUF)
+     LUT5:I0->O           10   0.097   0.321  _n0035_inv1 (_n0035_inv)
+     FDCE:CE                   0.095          read_binary_0
+    ----------------------------------------
+    Total                      1.201ns (0.193ns logic, 1.008ns route)
+                                       (16.1% logic, 83.9% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_read'
+  Total number of paths / destination ports: 30 / 21
+-------------------------------------------------------------------------
+Offset:              1.145ns (Levels of Logic = 2)
+  Source:            read_binary_5 (FF)
+  Destination:       read_gray_pointer<5> (PAD)
+  Source Clock:      clk_read rising
+
+  Data Path: read_binary_5 to read_gray_pointer<5>
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDCE:C->Q             7   0.361   0.407  read_binary_5 (read_binary_5)
+     LUT2:I0->O            1   0.097   0.279  bin_to_grap/Mxor_temp<5>_xo<0>1 (read_gray_pointer_5_OBUF)
+     OBUF:I->O                 0.000          read_gray_pointer_5_OBUF (read_gray_pointer<5>)
+    ----------------------------------------
+    Total                      1.145ns (0.458ns logic, 0.687ns route)
+                                       (40.0% logic, 60.0% route)
+
+=========================================================================
+
+Cross Clock Domains Report:
+--------------------------
+
+Clock to Setup on destination clock clk_read
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk_read       |    3.140|         |         |         |
+---------------+---------+---------+---------+---------+
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 17.00 secs
+Total CPU time to Xst completion: 16.22 secs
+ 
+--> 
+
+
+Total memory usage is 604788 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

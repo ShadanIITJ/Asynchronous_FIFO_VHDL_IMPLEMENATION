@@ -1,0 +1,2 @@
+vhdl isim_temp "gray_to_binary.vhd"
+vhdl isim_temp "test_gray_to_bin.vhd"

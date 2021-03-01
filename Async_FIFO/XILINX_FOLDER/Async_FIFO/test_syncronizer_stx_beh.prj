@@ -1,0 +1,3 @@
+vhdl isim_temp "flip_flop.vhd"
+vhdl isim_temp "synchronizer.vhd"
+vhdl isim_temp "test_syncronizer.vhd"

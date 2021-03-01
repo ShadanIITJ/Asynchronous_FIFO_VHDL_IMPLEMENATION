@@ -1,0 +1,5 @@
+vhdtdtfi -lib work flip_flop.vhd -lib work synchronizer.vhd -lib work gray_to_binary.vhd -lib work binary_to_gray.vhd -lib work read_control.vhd -prj Async_FIFO -o read_control.spl -module read_control -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 read_control.spl /home/ise/Desktop/CODE/Async_FIFO/read_control.sym 
+vhdtdtfi -lib work flip_flop.vhd -lib work synchronizer.vhd -lib work gray_to_binary.vhd -lib work binary_to_gray.vhd -lib work read_control.vhd -prj Async_FIFO -o read_control.spl -module read_control -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 read_control.spl /home/ise/Desktop/CODE/Async_FIFO/read_control.sym 
+xst -intstyle ise -ifn "/home/ise/Desktop/CODE/Async_FIFO/read_control.xst" -ofn "/home/ise/Desktop/CODE/Async_FIFO/read_control.syr" 

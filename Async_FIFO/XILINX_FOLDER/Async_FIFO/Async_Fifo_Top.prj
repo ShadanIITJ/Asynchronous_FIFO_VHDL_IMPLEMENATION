@@ -1,0 +1,8 @@
+vhdl work "flip_flop.vhd"
+vhdl work "synchronizer.vhd"
+vhdl work "gray_to_binary.vhd"
+vhdl work "binary_to_gray.vhd"
+vhdl work "write_control.vhd"
+vhdl work "read_control.vhd"
+vhdl work "Memory.vhd"
+vhdl work "Async_Fifo_Top.vhd"

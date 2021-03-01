@@ -1,0 +1,8 @@
+work	"Async_Fifo_Top.vhd"
+work	"Memory.vhd"
+work	"binary_to_gray.vhd"
+work	"flip_flop.vhd"
+work	"gray_to_binary.vhd"
+work	"read_control.vhd"
+work	"synchronizer.vhd"
+work	"write_control.vhd"

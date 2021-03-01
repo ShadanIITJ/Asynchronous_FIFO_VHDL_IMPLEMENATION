@@ -1,0 +1,6 @@
+vhdtdtfi -prj Async_FIFO -o /home/ise/Desktop/CODE/Async_FIFO/gray_to_binary.vhi -module gray_to_binary -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work gray_to_binary.vhd 
+vhdtdtfi -prj Async_FIFO -o /home/ise/Desktop/CODE/Async_FIFO/gray_to_binary.vhi -module gray_to_binary -template /opt/Xilinx/14.7/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work gray_to_binary.vhd 
+vhdtdtfi -lib work gray_to_binary.vhd -prj Async_FIFO -o gray_to_binary.spl -module gray_to_binary -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 gray_to_binary.spl /home/ise/Desktop/CODE/Async_FIFO/gray_to_binary.sym 
+vhdtdtfi -lib work gray_to_binary.vhd -prj Async_FIFO -o gray_to_binary.spl -module gray_to_binary -template /opt/Xilinx/14.7/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family artix7 gray_to_binary.spl /home/ise/Desktop/CODE/Async_FIFO/gray_to_binary.sym 
